@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:00.700
+PR #9276 exact-head provenance and clean worktree
+
+00:00:00.700 --> 00:00:02.800
+Full production diff and draft PR status at 2566239e
+
+00:00:02.800 --> 00:00:04.200
+Three focused payload-budget regressions pass
+
+00:00:04.200 --> 00:00:04.440
+Pre-run and post-run SHA match — PASS
