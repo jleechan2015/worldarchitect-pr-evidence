@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:17,200
+PR #9432 — exact-SHA organic creation-to-Level-4 proof: PASS
+Raw XP delta + PCD absolute XP pair; Firestore and all session headers agree
