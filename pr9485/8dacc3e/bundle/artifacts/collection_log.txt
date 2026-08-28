@@ -1,0 +1,260 @@
++ git status --porcelain
++ git branch --show-current
+chore/dedupe-global-commands-skills-20260828
++ git merge-base HEAD origin/main
+3e42cca49a9d1ae71a01816ee4864ed8b78b3eff
++ git log --oneline origin/main..HEAD
+8dacc3e19b9 chore(skills): centralize global command copies [codex][gpt-5.6-sol]
++ git diff --stat origin/main...HEAD
+ .claude/commands/_shared/header.md                 |   3 -
+ .claude/commands/spec-kit/clarify.md               | 109 -----
+ .claude/commands/spec-kit/implement-spec.md        | 128 ------
+ .claude/commands/spec-kit/plan-spec.md             |  97 ----
+ .claude/commands/spec-kit/spec.md                  | 112 -----
+ .claude/commands/spec-kit/tasks-spec.md            | 137 ------
+ .claude/skills/code-quality/SKILL.md               |   2 +-
+ .claude/skills/generalized-testing/SKILL.md        | 249 ----------
+ .claude/skills/solid/SKILL.md                      | 270 -----------
+ .claude/skills/solid/references/architecture.md    | 318 -------------
+ .claude/skills/solid/references/clean-code.md      | 383 ----------------
+ .claude/skills/solid/references/code-smells.md     | 335 --------------
+ .claude/skills/solid/references/complexity.md      | 286 ------------
+ .claude/skills/solid/references/design-patterns.md | 508 ---------------------
+ .claude/skills/solid/references/object-design.md   | 329 -------------
+ .../skills/solid/references/solid-principles.md    | 262 -----------
+ .claude/skills/solid/references/tdd.md             | 152 ------
+ .claude/skills/solid/references/testing.md         | 396 ----------------
+ .codex/skills/generalized-testing                  |   1 -
+ .codex/skills/solid                                |   1 -
+ 20 files changed, 1 insertion(+), 4077 deletions(-)
++ git diff --name-status origin/main...HEAD
+D	.claude/commands/_shared/header.md
+D	.claude/commands/spec-kit/clarify.md
+D	.claude/commands/spec-kit/implement-spec.md
+D	.claude/commands/spec-kit/plan-spec.md
+D	.claude/commands/spec-kit/spec.md
+D	.claude/commands/spec-kit/tasks-spec.md
+M	.claude/skills/code-quality/SKILL.md
+D	.claude/skills/generalized-testing/SKILL.md
+D	.claude/skills/solid/SKILL.md
+D	.claude/skills/solid/references/architecture.md
+D	.claude/skills/solid/references/clean-code.md
+D	.claude/skills/solid/references/code-smells.md
+D	.claude/skills/solid/references/complexity.md
+D	.claude/skills/solid/references/design-patterns.md
+D	.claude/skills/solid/references/object-design.md
+D	.claude/skills/solid/references/solid-principles.md
+D	.claude/skills/solid/references/tdd.md
+D	.claude/skills/solid/references/testing.md
+D	.codex/skills/generalized-testing
+D	.codex/skills/solid
++ ./run_tests.sh .claude/commands/tests/test_compose_commands.py
+[0;34m[INFO][0m Git worktree detected — symlinking to main project venv: /Users/REDACTED/projects/worldarchitect.ai/venv
+[0;34m[INFO][0m 🎯 Specific Test Mode: Running 1 specified test file(s)
+[0;34m[INFO][0m   - .claude/commands/tests/test_compose_commands.py
+[0;34m[INFO][0m Skipping integration tests (include_integration=false, use --integration to include them)
+[1;33m[WARN][0m ⚠️ Missing optional dependencies that may cause import failures:
+[1;33m[WARN][0m   - fastapi
+[1;33m[WARN][0m   - django
+[1;33m[WARN][0m   - influxdb-client
+[1;33m[WARN][0m   - flask-socketio
+[1;33m[WARN][0m To align with CI: pip install fastapi django influxdb-client flask-socketio
+[0;34m[INFO][0m Running tests from project root for complete discovery...
+[0;34m[INFO][0m Setting TESTING=true for faster AI model usage
+[0;34m[INFO][0m TEST_MODE=mock (Real-Mode Testing Framework)
+[0;34m[INFO][0m 🔧 CI Simulation Mode: Simulating GitHub Actions environment
+[0;32m[SUCCESS][0m ✅ CI simulation environment configured (matches GitHub Actions)
+[0;34m[INFO][0m 📊 Found 1 test files to execute
+[0;34m[INFO][0m 📋 Test files preview (first 10):
+  .claude/commands/tests/test_compose_commands.py
+[0;34m[INFO][0m 🪝 Running Claude Code hooks tests...
+[0;34m[INFO][0m Hook test script not found or not executable, skipping...
+[0;34m[INFO][0m 💾 Running backup script tests...
+[0;34m[INFO][0m Backup test script not found or not executable at scripts/tests/test_claude_backup.sh, skipping...
+[0;34m[INFO][0m Running tests in parallel (GitHub Actions: 2 workers - matching runner cores)...
+[0;34m[INFO][0m 🚀 Starting test execution: 1 files, 2 workers
+[0;34m[INFO][0m 📊 Memory monitoring active: 30GB total limit, 10GB per process
+[0;34m[INFO][0m ⏱️  Test suite timeout: 900 seconds (15 minutes)
+[0;34m[INFO][0m ⏱️  Enforcing suite deadline at: 2026-08-28 15:36:09
+[0;34m[INFO][0m 🧪 Running test: .claude/commands/tests/test_compose_commands.py
+[0;34m[INFO][0m 📊 Processing test results...
+  [0;32m✓[0m test_compose_commands.py (0.793738s)
+
+[0;34m╔════════════════════════════════════════════╗[0m
+[0;34m║              Test Summary                 ║[0m
+[0;34m╚════════════════════════════════════════════╝[0m
+
+Total tests run: [0;34m1[0m
+Passed: [0;32m1[0m
+Failed: [0;31m0[0m
+
+Success rate: 100.0%
+
+[0;32m[SUCCESS][0m 🎉 All tests passed!
++ python3 scripts/sync_codex_claude_skills.py --scope project --dry-run
+# /Users/REDACTED/projects/worktree_command_skill_dedupe/.claude/skills -> /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/4layer/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/adjustment-proof
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/agents/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/ai-universe-auth/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/ai-universe-httpie/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/ai-universe-second-opinion-workflow/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/automation-audit/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/automation-orchestration-guide/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/autonomous-execution/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/backend-first
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/bashrc-credential-guard/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/beads-issue-tracking/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/bq-evidence-reading/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/browser-testing-ocr-validation/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/build-test-lint-autopilot/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/bypass-claims/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/character-creation-modal-exit/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/chrome-localhost3000-usage/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/chrome-superpowers-reference/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/claude-code-schema-validation/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/claude-code-settings-maintenance/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/cloud-ops-credential-guard/SKILL.md
+excluded cmux-goal
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/cmux-resume-watchdog
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/cmux-steer/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/code-centralization/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/code-quality
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/code-standards
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/conversation-history-sparse/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/coverage-analysis/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/design-fidelity-diff/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/design-retro-publishability-gate
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/dice-authenticity-standards/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/dice-real-mode-tests/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/dice-roll-audit/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/distributed-caching/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/end2end-testing/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/engplan/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/evidence-coverage/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/evidence-review/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/evidence-standards/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/ezgha-watchdog
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/field-ownership-contracts/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/file-justification/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/firebase-campaign-copy/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/firebase-prod-campaigns/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/gcp-deployment/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/gcp-deployments/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/gemini-3-api/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/gemini-code-execution-json-mode/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/gemini-structured-output-schema
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/git-branch-tracking/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/github-cli-reference/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/goal_harness
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/goalexec
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/goalexec-define
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/harness-guardrails/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/host-disk-guardian
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/integration-verification/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/isolate-llm-vs-backend
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/learn
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/level-up-validation
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/level-up-zfc
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/levelup
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/llm-first
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/llm-json-schema-documentation/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/llm-prompt-engineering/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/llm-testing/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/local-agy-provider-detection
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/local-dev-server/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/loop-level-zfc
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/mcp-agent-mail/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/minimax/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/minimax-cli-fix/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/mobile-investigations
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/modal-agent-pattern/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/openclaw-diagnostics/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/oracle-browser-usage/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/org-runner-audit/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/playwright-mcp-manual-interaction/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/ponytail
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-automation-workflows/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-babysit
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-blocker-min-repro/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-efficiency-audit/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-green-definition/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-preview-servers/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-quantity-control/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pr-workflow-manager/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/pre-cr-checklist/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/realistic-user-testing
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/repro-copy/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/repro-twin-clone-evidence
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/root-cause-first
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/runner-health
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/runtime-mirror-sync
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/second-call-boundary/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/secondo-dependencies/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/shadow-execution-gate/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/smoke-local
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/smoke-test-local/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/spicy_remove/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/streaming-evidence-standards/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-brainstorming/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-dispatching-parallel-agents/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-executing-plans/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-finishing-a-development-branch/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-receiving-code-review/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-requesting-code-review/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-subagent-driven-development/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-systematic-debugging/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-test-driven-development/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-using-git-worktrees/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-using-superpowers/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-verification-before-completion/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-writing-plans/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/superpowers-writing-skills/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/test-api-keys-ai-universe/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/testing-gap-close/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/testing-infrastructure/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/testing-layers
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/unified-logging/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/user-story-worldai
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/video-frame-review/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/worldai-auth/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/worldai-browser-login/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/worldai-mcp-server-usage/SKILL.md
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/worldai-tools-mcp-proxy-testing/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/worldarchitect-codebase-sherpa/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/worldarchitect-local-debugging/SKILL.md
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/zero-framework-cognition
+skipped existing /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/zfc-adjuster
+unchanged /Users/REDACTED/projects/worktree_command_skill_dedupe/.codex/skills/zfc-leveling-roadmap
++ set +x
+source	canonical_sha256	base_blob_sha256	result
+commands/_shared/header.md	9fcf2e86584625307f09a475986d0cd508f9426e2d7989d555491e7e9c002710	9fcf2e86584625307f09a475986d0cd508f9426e2d7989d555491e7e9c002710	PASS
+commands/spec-kit/clarify.md	932801fe6ddc4864b6086346af2b763f8d128651c59cc565b61dbafae799f200	932801fe6ddc4864b6086346af2b763f8d128651c59cc565b61dbafae799f200	PASS
+commands/spec-kit/implement-spec.md	32d353b35866ab0e65da1023c29c42fa468edf0bf27eca33113181301226a414	32d353b35866ab0e65da1023c29c42fa468edf0bf27eca33113181301226a414	PASS
+commands/spec-kit/plan-spec.md	de8e568fc4052cd8e973f6ff290884cb1228cddac6c4bf5706bcee50a4d7eec9	de8e568fc4052cd8e973f6ff290884cb1228cddac6c4bf5706bcee50a4d7eec9	PASS
+commands/spec-kit/spec.md	b3724f2c4c2ba6eae12419e96b79efcd1bd375a1a3bee8698451a6fb5f36e166	b3724f2c4c2ba6eae12419e96b79efcd1bd375a1a3bee8698451a6fb5f36e166	PASS
+commands/spec-kit/tasks-spec.md	e1267ff1f44c00ed7d0bce51304b02763eea2f972c061c387f7247b63ba27e6c	e1267ff1f44c00ed7d0bce51304b02763eea2f972c061c387f7247b63ba27e6c	PASS
+skills/generalized-testing/SKILL.md	1141768027c2975cf4e013f52cebedd39379a7995714f83398fc8b4d1ebfdec7	1141768027c2975cf4e013f52cebedd39379a7995714f83398fc8b4d1ebfdec7	PASS
+skills/solid/SKILL.md	22581037aeeb0510e4cdad9e307a419f1e358374694f019631c931b80b0dd9ea	22581037aeeb0510e4cdad9e307a419f1e358374694f019631c931b80b0dd9ea	PASS
+skills/solid/references/architecture.md	ac90fde01a581480c494f9c584b8022856e7533e99284000cd6cf43ff2185300	ac90fde01a581480c494f9c584b8022856e7533e99284000cd6cf43ff2185300	PASS
+skills/solid/references/clean-code.md	15d65792572c1afe19e1aeb552d02d8caac718f0eec730dd46d6c31e1de3698d	15d65792572c1afe19e1aeb552d02d8caac718f0eec730dd46d6c31e1de3698d	PASS
+skills/solid/references/code-smells.md	7ae8cf13d3f5b33fac08d21ecd8da73bec50d4ee414e8b38bf611481a057f49f	7ae8cf13d3f5b33fac08d21ecd8da73bec50d4ee414e8b38bf611481a057f49f	PASS
+skills/solid/references/complexity.md	54136fb96a4b80851bc6dc0ae5720335ae2bf8a49d521347f5174c029c0c662d	54136fb96a4b80851bc6dc0ae5720335ae2bf8a49d521347f5174c029c0c662d	PASS
+skills/solid/references/design-patterns.md	3b2402ee876bd8b875d09b1cf0777868fb1b9817a473193096d1b3bcc119a65a	3b2402ee876bd8b875d09b1cf0777868fb1b9817a473193096d1b3bcc119a65a	PASS
+skills/solid/references/object-design.md	a8b212ad602f2e7196dc9d886af18ffe5f8f175f7cf12630348f86e997ca58c4	a8b212ad602f2e7196dc9d886af18ffe5f8f175f7cf12630348f86e997ca58c4	PASS
+skills/solid/references/solid-principles.md	072a9ab259a63b1c018d857f800ff3c3d146704e2cde827e7ec52759887db37c	072a9ab259a63b1c018d857f800ff3c3d146704e2cde827e7ec52759887db37c	PASS
+skills/solid/references/tdd.md	9cb048955f6126a699d2c464b9829691c5c127ea132a45e909f3c2e1d9636c9f	9cb048955f6126a699d2c464b9829691c5c127ea132a45e909f3c2e1d9636c9f	PASS
+skills/solid/references/testing.md	07a8c2030bd29ffd7a3e96dfc763efcbd8efb08b2cd724f73e6501837fd24477	07a8c2030bd29ffd7a3e96dfc763efcbd8efb08b2cd724f73e6501837fd24477	PASS
+CANONICAL_BYTES: PASS 17/17
+.gemini/commands/header.toml	../../.claude/commands/header.md	PASS
+.gemini/commands/ralph_benchmark_parallel.toml	../../.claude/commands/ralph_benchmark_parallel.md	PASS
+.gemini/commands/ralph_iteration.toml	../../.claude/commands/ralph_iteration.md	PASS
+.gemini/commands/ralph_pair_iteration.toml	../../.claude/commands/ralph_pair_iteration.md	PASS
+GEMINI_WRAPPERS: PASS 4/4
+generalized-testing	../../.claude/skills/generalized-testing	PASS
+solid	../../.claude/skills/solid	PASS
+GLOBAL_CODEX_DISCOVERY: PASS 2/2
+PRE=8dacc3e19b9ca8df59aab4bf17fc5d4a1fcbb975
+POST=8dacc3e19b9ca8df59aab4bf17fc5d4a1fcbb975
+SHA MATCH
+WORKTREE_STATUS: CLEAN

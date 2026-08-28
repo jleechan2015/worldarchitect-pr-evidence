@@ -1,0 +1,23 @@
+{
+  "bundle_version": "1.0",
+  "bundle_timestamp": "2026-08-28T22:06:16Z",
+  "run_id": "pr9485-ready-20260828T220616Z",
+  "iteration": 1,
+  "provenance": {
+    "git_head": "8dacc3e19b9ca8df59aab4bf17fc5d4a1fcbb975",
+    "git_branch": "chore/dedupe-global-commands-skills-20260828",
+    "merge_base": "3e42cca49a9d1ae71a01816ee4864ed8b78b3eff",
+    "commits_ahead_of_main": 1,
+    "diff_stat_vs_main": "20 files changed, 1 insertion(+), 4077 deletions(-)",
+    "worktree_clean": true
+  },
+  "classification": "NON_PRODUCTION_COMMAND_SKILL_CLEANUP",
+  "environment": {
+    "python": "CPython 3.12.11",
+    "service_account_required": false,
+    "external_services_required": false
+  },
+  "server": null,
+  "llm_provider": null,
+  "ui": null
+}

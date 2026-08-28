@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+PR #9485 exact head: clean worktree, branch, merge base, commit, and diff.
+
+00:00:04.000 --> 00:00:09.500
+Focused compose-command test: PASS 1/1 with zero failures.
+
+00:00:09.500 --> 00:00:12.854
+Skill sync PASS, canonical bytes 17/17, discovery 2/2, and pre/post SHA match.
