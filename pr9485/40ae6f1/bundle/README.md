@@ -30,9 +30,9 @@ python3.12 -m venv venv
 python3 scripts/sync_codex_claude_skills.py --scope project --dry-run
 ```
 
-Expected: `test_compose_commands.py` passes 1/1 (its internal runner reports
-eight passing cases, including the active `planexec` dependency regression);
-the sync dry run emits no line beginning with `linked` or `error:`. The
+Expected: `test_compose_commands.py` passes 1/1; the active `planexec`
+dependency assertion is part of that focused file. The sync dry run emits no
+line beginning with `linked` or `error:`. The
 published collection log also records the 17/17 canonical byte comparisons,
 four retained Gemini wrapper mappings, the two repaired `planexec` references,
 two global Codex pointers, and clean pre/post SHA identity. Those

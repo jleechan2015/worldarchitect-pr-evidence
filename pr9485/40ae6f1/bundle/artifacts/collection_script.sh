@@ -16,7 +16,6 @@ git log --oneline origin/main..HEAD
 git diff --stat origin/main...HEAD
 git diff --name-status origin/main...HEAD
 ./run_tests.sh .claude/commands/tests/test_compose_commands.py
-CI=true GITHUB_ACTIONS=true ./vpython .claude/commands/tests/test_compose_commands.py
 python3 scripts/sync_codex_claude_skills.py --scope project --dry-run
 set +x
 

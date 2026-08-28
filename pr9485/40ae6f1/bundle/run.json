@@ -6,7 +6,6 @@
       "name": "compose-command-focused-test",
       "status": "PASS",
       "passed": 1,
-      "internal_cases_passed": 8,
       "failed": 0,
       "errors": []
     },

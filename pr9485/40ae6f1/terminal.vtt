@@ -4,7 +4,7 @@ WEBVTT
 PR #9485 exact head 40ae6f1: clean provenance and non-production diff.
 
 00:00:02.000 --> 00:00:04.000
-Command test: PASS 1 file and 8 internal cases; planexec refs: PASS 2/2.
+Command test: PASS 1/1; planexec canonical refs: PASS 2/2.
 
-00:00:04.000 --> 00:00:05.800
+00:00:04.000 --> 00:00:05.500
 Sync clean; canonical bytes 17/17; discovery 2/2; pre/post SHA match.
