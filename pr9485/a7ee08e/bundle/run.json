@@ -1,0 +1,64 @@
+{
+  "run_id": "pr9485-ready-20260828T233640Z",
+  "head": "a7ee08ed586fe3801eae7db0de5ed1ca530cd4b0",
+  "scenarios": [
+    {
+      "name": "compose-command-focused-test",
+      "status": "PASS",
+      "passed": 1,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "active-planexec-solid-dependencies",
+      "status": "PASS",
+      "resolved": 2,
+      "expected": 2,
+      "errors": []
+    },
+    {
+      "name": "project-codex-skill-sync-dry-run",
+      "status": "PASS",
+      "linked_or_error_lines": 0,
+      "errors": []
+    },
+    {
+      "name": "canonical-byte-preservation",
+      "status": "PASS",
+      "matched": 17,
+      "expected": 17,
+      "errors": []
+    },
+    {
+      "name": "global-codex-discovery",
+      "status": "PASS",
+      "resolved": 2,
+      "expected": 2,
+      "errors": []
+    },
+    {
+      "name": "retained-gemini-command-wrappers",
+      "status": "PASS",
+      "resolved": 4,
+      "expected": 4,
+      "errors": []
+    },
+    {
+      "name": "pinned-user-catalog-install",
+      "status": "PASS",
+      "matched": 17,
+      "expected": 17,
+      "catalog_head": "41ce34ba240f4d5e8ff5c479907db4887598ce00",
+      "errors": []
+    },
+    {
+      "name": "catalog-host-discovery",
+      "status": "PASS",
+      "commands": 5,
+      "expected_commands": 5,
+      "skills": 2,
+      "expected_skills": 2,
+      "errors": []
+    }
+  ]
+}

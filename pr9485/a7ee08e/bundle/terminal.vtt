@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.100
+PR #9485 exact head a7ee08e: clean provenance and non-production diff.
+
+00:00:01.100 --> 00:00:02.100
+Command test: PASS 1/1; planexec canonical refs: PASS 2/2.
+
+00:00:02.100 --> 00:00:03.100
+Catalog install 17/17; host discovery 5 commands and 2 skills; SHA match.
