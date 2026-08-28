@@ -14,10 +14,11 @@ catalog installation are out of scope.
 
 ## Clean-computer reproduction
 
-Requirements: authenticated GitHub access to the private repository, Git,
+Requirements: authenticated GitHub access to the private repository, network
+access to GitHub for the pinned public `jleechan-skills` catalog clone, Git,
 Bash, and CPython 3.12.11 (the captured environment). No service account,
-Firebase credential, API key, Node runtime, server, or external service is
-used by these non-production checks.
+Firebase credential, API key, Node runtime, application server, or model
+provider call is used by these non-production checks.
 
 ```bash
 git clone git@github.com:jleechanorg/worldarchitect.ai.git
