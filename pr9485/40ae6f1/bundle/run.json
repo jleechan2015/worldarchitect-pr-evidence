@@ -1,0 +1,48 @@
+{
+  "run_id": "pr9485-ready-20260828T224114Z",
+  "head": "40ae6f15fb3a7144928017591d30a6f7ec1a7c67",
+  "scenarios": [
+    {
+      "name": "compose-command-focused-test",
+      "status": "PASS",
+      "passed": 1,
+      "internal_cases_passed": 8,
+      "failed": 0,
+      "errors": []
+    },
+    {
+      "name": "active-planexec-solid-dependencies",
+      "status": "PASS",
+      "resolved": 2,
+      "expected": 2,
+      "errors": []
+    },
+    {
+      "name": "project-codex-skill-sync-dry-run",
+      "status": "PASS",
+      "linked_or_error_lines": 0,
+      "errors": []
+    },
+    {
+      "name": "canonical-byte-preservation",
+      "status": "PASS",
+      "matched": 17,
+      "expected": 17,
+      "errors": []
+    },
+    {
+      "name": "global-codex-discovery",
+      "status": "PASS",
+      "resolved": 2,
+      "expected": 2,
+      "errors": []
+    },
+    {
+      "name": "retained-gemini-command-wrappers",
+      "status": "PASS",
+      "resolved": 4,
+      "expected": 4,
+      "errors": []
+    }
+  ]
+}
