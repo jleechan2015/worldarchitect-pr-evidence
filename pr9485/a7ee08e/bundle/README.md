@@ -45,11 +45,15 @@ five commands and two skills, and clean pre/post SHA identity.
 - [`terminal.gif`](https://jleechan2015.github.io/worldarchitect-pr-evidence/pr9485/a7ee08e/terminal.gif) — browser-friendly preview of provenance, diff, tests, sync, dependency repair, byte-preservation, discovery, and post-run SHA.
 - [`terminal.mp4`](https://jleechan2015.github.io/worldarchitect-pr-evidence/pr9485/a7ee08e/terminal.mp4) — downloadable high-fidelity terminal video, served as `video/mp4`.
 - [`terminal.vtt`](https://jleechan2015.github.io/worldarchitect-pr-evidence/pr9485/a7ee08e/terminal.vtt) — captions naming the test, result, and key assertions, served as `text/vtt`.
-- `terminal.cast` — asciinema presentation of key raw log lines.
-- `terminal-transcript.txt` — authoritative non-TTY command transcript.
+- `terminal.cast` — asciinema recording of the actual collection-script run.
+- `terminal-transcript.txt` — ANSI-stripped transcript of the actual recorded
+  collection-script execution.
 - `artifacts/collection_script.sh` — exact collection commands.
-- `artifacts/collection_log.txt` — sanitized raw output from that script,
+- `artifacts/collection_log.txt` — raw output from that recorded execution,
   including per-file SHA-256 comparisons and retained Gemini mappings.
+- `artifacts/claude-init.sanitized.jsonl` — complete three-event Claude host
+  output with only ephemeral paths and identifiers removed; it includes the
+  original `system/init` inventory and authentication error.
 - `metadata.json`, `run.json`, `methodology.md`, `evidence.md` — provenance and
   claim mapping.
 - `checksums.sha256` — integrity manifest for every substantive artifact.

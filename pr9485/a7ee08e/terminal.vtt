@@ -1,10 +1,16 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:01.100
-PR #9485 exact head a7ee08e: clean provenance and non-production diff.
+00:00:00.000 --> 00:00:04.000
+PR #9485 exact head a7ee08e: real collection script starts from a clean worktree and records the non-production diff.
 
-00:00:01.100 --> 00:00:02.100
-Command test: PASS 1/1; planexec canonical refs: PASS 2/2.
+00:00:04.000 --> 00:00:08.000
+Focused command test runs and passes 1/1; project skill synchronization reports zero linked or error lines.
 
-00:00:02.100 --> 00:00:03.100
-Catalog install 17/17; host discovery 5 commands and 2 skills; SHA match.
+00:00:08.000 --> 00:00:13.000
+Planexec references pass 2/2; deleted canonical bytes pass 17/17; four Gemini wrappers and two global Codex pointers pass.
+
+00:00:13.000 --> 00:00:18.000
+Pinned public catalog installs 790 files; all 17 removed assets match the catalog and PR base bytes.
+
+00:00:18.000 --> 00:00:21.560
+Complete sanitized Claude init JSONL is published; host discovery passes 5 commands and 2 skills before expected authentication failure; SHA remains unchanged and clean.

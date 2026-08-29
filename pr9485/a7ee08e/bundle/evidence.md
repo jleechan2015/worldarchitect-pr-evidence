@@ -6,13 +6,13 @@
 |---|---|---|
 | Exact head and clean capture | `terminal-transcript.txt` | `HEAD`, `WORKTREE_STATUS: CLEAN`, `SHA MATCH` |
 | Focused command test passes | `terminal-transcript.txt` | `Passed: 1`, `Failed: 0` |
-| Active planexec dependency regression passes | `artifacts/collection_log.txt` | `Active planexec project skill links resolve` and `PLANEXEC_SOLID_REFS: PASS 2/2` |
-| Project skill mirror remains synchronized | `terminal-transcript.txt` | `LINKED_OR_ERROR_LINES: 0`, `PROJECT_SKILL_SYNC: PASS` |
+| Active planexec dependency regression passes | `artifacts/collection_log.txt` | two bounded pointer rows and `PLANEXEC_SOLID_REFS: PASS 2/2` |
+| Project skill mirror remains synchronized | `artifacts/collection_log.txt` | `PROJECT_SKILL_SYNC: PASS linked_or_error_lines=0` |
 | Deleted regular files match canonical copies | `artifacts/collection_log.txt` | 17 per-file canonical/base SHA-256 rows plus `CANONICAL_BYTES: PASS 17/17` |
 | Four repo-local commands remain because Gemini wrappers point to them | `artifacts/collection_log.txt` | four `.gemini/commands/*.toml` mapping rows plus `GEMINI_WRAPPERS: PASS 4/4` |
 | Global Codex discovery remains available | `artifacts/collection_log.txt` | two bounded pointer rows plus `GLOBAL_CODEX_DISCOVERY: PASS 2/2` |
 | Pinned catalog provisions every removed asset | `artifacts/collection_log.txt` | installer manifest 790 files plus `CATALOG_INSTALL_BYTES: PASS 17/17` |
-| Real host discovers catalog commands and skills | `artifacts/collection_log.txt` | filtered initialization JSON plus `CATALOG_HOST_DISCOVERY: PASS commands=5/5 skills=2/2 auth=expected-isolated-home-failure` |
+| Real host discovers catalog commands and skills | `artifacts/claude-init.sanitized.jsonl`, `artifacts/collection_log.txt` | complete sanitized three-event JSONL, `CLAUDE_INIT_RAW: PASS`, and `CATALOG_HOST_DISCOVERY: PASS commands=5/5 skills=2/2 auth=expected-isolated-home-failure` |
 | Exact collection commands and raw output are published | `artifacts/collection_script.sh`, `artifacts/collection_log.txt` | script commands, shell trace, raw runner output |
 
 ## What this evidence proves
@@ -31,6 +31,9 @@
   the five Spec Kit commands plus both shared skills before the expected
   authentication failure of that clean isolated home. No provider call was
   required for discovery.
+- The published sanitized JSONL preserves the complete init, synthetic
+  authentication-error assistant event, and result event while removing only
+  ephemeral paths and identifiers.
 
 ## What this evidence does not prove
 

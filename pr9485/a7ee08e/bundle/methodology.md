@@ -17,14 +17,15 @@
 9. Clone pinned `jleechan-skills` revision `41ce34b`, install it into an
    isolated `CLAUDE_HOME`, and verify all 17 removed assets against both the
    catalog and PR base bytes.
-10. Start a real Claude host with the unauthenticated isolated catalog, inspect
-    its `system/init` inventory, and verify discovery of all five Spec Kit
-    commands plus `generalized-testing` and SOLID before the expected auth
-    failure. This performs no provider call.
+10. Start a real Claude host with the unauthenticated isolated catalog, publish
+    its complete three-event JSONL after removing ephemeral paths and
+    identifiers, and verify discovery of all five Spec Kit commands plus
+    `generalized-testing` and SOLID before the expected auth failure. This
+    performs no provider call.
 11. Re-read HEAD after all checks and require it to equal the pre-run SHA.
-12. Capture the authoritative script output without a TTY, record the key raw
-    log lines with asciinema for presentation, render GIF and MP4, and checksum
-    every published artifact.
+12. Capture the actual collection-script execution with asciinema, retain its
+    ANSI-stripped transcript as the authoritative raw log, render GIF and MP4
+    from that real execution, and checksum every published artifact.
 
 Pass criteria are exact: focused test 1/1, planexec references 2/2, sync
 problem count 0, byte matches 17/17, Gemini wrapper

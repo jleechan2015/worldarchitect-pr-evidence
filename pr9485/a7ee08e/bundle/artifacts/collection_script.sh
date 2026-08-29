@@ -16,7 +16,13 @@ git log --oneline origin/main..HEAD
 git diff --stat origin/main...HEAD
 git diff --name-status origin/main...HEAD
 ./run_tests.sh .claude/commands/tests/test_compose_commands.py
-python3 scripts/sync_codex_claude_skills.py --scope project --dry-run
+SYNC_OUTPUT="$(python3 scripts/sync_codex_claude_skills.py --scope project --dry-run)"
+printf "%s\n" "$SYNC_OUTPUT"
+if printf "%s\n" "$SYNC_OUTPUT" | grep -Eq '^(linked|error:)'; then
+  printf "PROJECT_SKILL_SYNC: FAIL unexpected linked/error line\n"
+  exit 1
+fi
+printf "PROJECT_SKILL_SYNC: PASS linked_or_error_lines=0\n"
 set +x
 
 for COMMAND_PATH in \
@@ -121,7 +127,8 @@ do
 done
 printf "CATALOG_INSTALL_BYTES: PASS %s/17\n" "$CATALOG_COUNT"
 
-DISCOVERY_RAW="$(mktemp /tmp/pr9485-host-init.XXXXXX.jsonl)"
+DISCOVERY_RAW="$(mktemp /tmp/pr9485-host-init.XXXXXX)"
+DISCOVERY_PUBLISH="${PR9485_DISCOVERY_RAW_OUTPUT:-/tmp/pr9485-claude-init.sanitized.jsonl}"
 set +e
 (
   cd "$CATALOG_INSTALL_PARENT"
@@ -134,6 +141,16 @@ DISCOVERY_STATUS=$?
 set -e
 test "$DISCOVERY_STATUS" -eq 1
 grep -Fq '"error":"authentication_failed"' "$DISCOVERY_RAW"
+jq -c '
+  del(.cwd, .session_id, .uuid, .memory_paths, .messaging_socket_path)
+  | if (.message | type) == "object" then
+      .message |= del(.id, .session_id, .uuid, .timestamp)
+    else . end
+' "$DISCOVERY_RAW" > "$DISCOVERY_PUBLISH"
+test "$(wc -l < "$DISCOVERY_PUBLISH" | tr -d ' ')" -eq 3
+grep -Fq '"subtype":"init"' "$DISCOVERY_PUBLISH"
+grep -Fq '"error":"authentication_failed"' "$DISCOVERY_PUBLISH"
+printf "CLAUDE_INIT_RAW: PASS sanitized_jsonl=%s lines=3\n" "$DISCOVERY_PUBLISH"
 DISCOVERY_JSON="$(
   jq -c 'select(.type == "system" and .subtype == "init") |
       {commands: [.slash_commands[] |
