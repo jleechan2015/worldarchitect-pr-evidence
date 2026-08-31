@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:03,500
+Exact-head page load — real signed-in campaign. URL and commit shown above.
+
+2
+00:00:03,500 --> 00:00:08,000
+Action: scroll through the 71k-pixel story. HUD remains visible; overlap is 0 px.
+
+3
+00:00:08,000 --> 00:00:11,000
+After: bottom reached; HUD remains fully visible at 393×852.

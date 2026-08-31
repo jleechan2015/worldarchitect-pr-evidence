@@ -1,0 +1,4 @@
+Activating virtual environment: /Users/jleechan/projects/wt-pr9535-comments/venv
+Running python -m pytest -q mvp_site/tests/test_mobile_game_view_hud_header.py mvp_site/tests/test_mobile_back_icon.py
+.......                                                                  [100%]
+7 passed in 0.23s
