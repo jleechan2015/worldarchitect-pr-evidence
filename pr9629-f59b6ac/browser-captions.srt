@@ -1,0 +1,9 @@
+1
+00:00:00,000 --> 00:00:04,000
+Exact head f59b6ac | signed-in real campaign | 393x852
+No header/story overlap; all controls remain in one row
+
+2
+00:00:04,000 --> 00:00:08,000
+Deep story scroll | sticky HUD remains visible
+Campaign Details 28x28; title ellipsized; Spicy labeled

@@ -1,0 +1,43 @@
+$ ./vpython -m pytest -q mvp_site/tests/test_mobile_game_view_hud_header.py mvp_site/tests/test_mobile_back_icon.py
+Activating virtual environment: /Users/jleechan/projects/wt-pr9629-ready/venv
+Running python -m pytest -q mvp_site/tests/test_mobile_game_view_hud_header.py mvp_site/tests/test_mobile_back_icon.py
+...................                                                      [100%]
+19 passed in 0.18s
+
+$ ~/.nvm/versions/node/v22.22.0/bin/node --test mvp_site/frontend_v1/tests/planning_choices_composer.test.js
+TAP version 13
+# current turn -> composer; older planning blocks stay clickable
+#   PASS  interactiveOnly emits clickable .choice-button elements
+#   PASS  interactiveOnly omits thinking/context prose (it lives in the story entry)
+#   PASS  C1: interactiveOnly omits the custom-action button — the textarea IS the free-form option
+#   PASS  history rendering keeps the custom-action button
+#   PASS  Option C: interactiveOnly carries none of Option E's numbered-row markup
+#   PASS  history rendering keeps choices CLICKABLE (old planning blocks stay usable)
+#   PASS  history choices keep every interaction data-attribute
+#   PASS  C6: composer labels are byte-identical to the default (unmoved) rendering
+#   PASS  C3: choice buttons carry no markup that would suppress submission
+#   PASS  switch_to_story_mode survives the move to the composer
+#   PASS  default (no options) rendering is unchanged for callers that pass nothing
+# 11 passed, 0 failed
+# Subtest: mvp_site/frontend_v1/tests/planning_choices_composer.test.js
+ok 1 - mvp_site/frontend_v1/tests/planning_choices_composer.test.js
+  ---
+  duration_ms: 34.045834
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 40.519458
+
+$ ./vpython -m ruff check mvp_site/tests/test_mobile_back_icon.py mvp_site/tests/test_mobile_game_view_hud_header.py
+Activating virtual environment: /Users/jleechan/projects/wt-pr9629-ready/venv
+Running python -m ruff check mvp_site/tests/test_mobile_back_icon.py mvp_site/tests/test_mobile_game_view_hud_header.py
+All checks passed!
+
+$ git diff --check

@@ -1,0 +1,19 @@
+{
+  "browser_mode": "aside-cli",
+  "campaign_id": "8AKkyXsv0RHRrebycvBk",
+  "head_sha": "f59b6ac2fa3a81abb8f2986ad1126b2cbe974100",
+  "preview_url": "https://mvp-site-app-s12-i6xf2p72ka-uc.a.run.app/game/8AKkyXsv0RHRrebycvBk",
+  "viewport_css_px": {"width": 393, "height": 852},
+  "header_rect_css_px": {"top": 45, "bottom": 97.5859375, "width": 369},
+  "story_top_css_px": 101.5859375,
+  "header_story_overlap_css_px": 0,
+  "header_scroll_width_css_px": 369,
+  "header_client_width_css_px": 369,
+  "campaign_details_css_px": {"width": 28, "height": 28},
+  "campaign_details_aria_label": "View campaign creation details",
+  "spicy_aria_label": "Spicy mode",
+  "title_text_overflow": "ellipsis",
+  "all_controls_inside_viewport": true,
+  "synthetic_dom": false,
+  "forced_game_view": false
+}
