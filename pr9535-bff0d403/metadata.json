@@ -1,0 +1,57 @@
+{
+  "pr": 9535,
+  "head_sha": "bff0d403b62614e86b836c9eb5d5ea218b57d23f",
+  "captured_at": "2026-09-01T02:11:00-07:00",
+  "preview": {
+    "url": "https://mvp-site-app-s5-i6xf2p72ka-uc.a.run.app",
+    "health_url": "https://mvp-site-app-s5-i6xf2p72ka-uc.a.run.app/health",
+    "health_git_commit": "bff0d403b62614e86b836c9eb5d5ea218b57d23f",
+    "workflow_run": "https://github.com/jleechanorg/worldarchitect.ai/actions/runs/33461003309",
+    "service": "mvp-site-app-s5",
+    "server": "s5",
+    "region": "us-central1"
+  },
+  "browser": {
+    "mode": "aside-cli",
+    "account": "u0 / jleechan@gmail.com",
+    "viewport_css": [393, 852],
+    "route": "/game/8AKkyXsv0RHRrebycvBk",
+    "authenticated": true,
+    "test_mode": false
+  },
+  "flow": [
+    {
+      "state": "BEFORE",
+      "story_scroll_top": 0,
+      "story_scroll_height": 69656,
+      "story_client_height": 446,
+      "hud_rect_css": [45, 241.9765625, 196.9765625],
+      "story_rect_css": [245.9765625, 694.421875, 448.4453125],
+      "overlap_px": 0
+    },
+    {
+      "state": "ACTION",
+      "story_scroll_top": 34828,
+      "story_scroll_height": 69609,
+      "story_client_height": 446,
+      "hud_rect_css": [45, 241.9765625, 196.9765625],
+      "story_rect_css": [245.9765625, 694.421875, 448.4453125],
+      "overlap_px": 0
+    },
+    {
+      "state": "AFTER",
+      "story_scroll_top": 69162.5,
+      "story_scroll_height": 69609,
+      "story_client_height": 446,
+      "hud_rect_css": [45, 241.9765625, 196.9765625],
+      "story_rect_css": [245.9765625, 694.421875, 448.4453125],
+      "overlap_px": 0
+    }
+  ],
+  "assertions": {
+    "sticky_position": "sticky",
+    "sticky_top": "0px",
+    "narrative_starts_after_hud": true,
+    "max_overlap_px": 0
+  }
+}

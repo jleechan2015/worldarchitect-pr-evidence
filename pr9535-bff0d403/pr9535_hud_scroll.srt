@@ -1,0 +1,17 @@
+1
+00:00:00,000 --> 00:00:03,000
+PR #9535 | HEAD bff0d403b62614e86b836c9eb5d5ea218b57d23f
+/game/8AKkyXsv0RHRrebycvBk | Aside u0 | 393x852
+BEFORE: story at top; HUD is in flow above narrative; overlap=0px
+
+2
+00:00:03,000 --> 00:00:06,000
+PR #9535 | HEAD bff0d403b62614e86b836c9eb5d5ea218b57d23f
+/game/8AKkyXsv0RHRrebycvBk | Aside u0 | 393x852
+ACTION: real user scrolls story to mid-point; sticky HUD remains pinned; overlap=0px
+
+3
+00:00:06,000 --> 00:00:09,000
+PR #9535 | HEAD bff0d403b62614e86b836c9eb5d5ea218b57d23f
+/game/8AKkyXsv0RHRrebycvBk | Aside u0 | 393x852
+AFTER: story at bottom; HUD remains visible above narrative; overlap=0px
