@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00.000 --> 00:02.000
+BEFORE — Mobile game header loaded at the route /game/8AKkyXsv0RHRrebycvBk; preview health.git_commit=6080a64501508a99db09a7bcf037b970bcff42a1 (behavior parent 52f1d3cf46ac5e49828258e32df20f67f9acc839).
+
+00:02.000 --> 00:04.000
+ACTION — Campaign Details control is tapped; route /game/8AKkyXsv0RHRrebycvBk; health.git_commit=6080a64501508a99db09a7bcf037b970bcff42a1.
+
+00:04.000 --> 00:07.000
+AFTER — Campaign Details is visibly reachable without header collision; route /game/8AKkyXsv0RHRrebycvBk; health.git_commit=6080a64501508a99db09a7bcf037b970bcff42a1.
+
+00:07.000 --> 00:10.000
+FINAL — Spicy mode disclosure is focusable and story remains reachable; route /game/8AKkyXsv0RHRrebycvBk; health.git_commit=6080a64501508a99db09a7bcf037b970bcff42a1.
