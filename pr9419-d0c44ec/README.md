@@ -16,7 +16,7 @@ public evidence gist.
 SHA-256:
 
 ```
-4f2b6e25b2df9fee893bb45a2071e57aea185c1273d702046aed645d2dc40a3a  terminal-red.cast
+f031c345725cb452538e929c7d6094cb5a7e165fddfe66087056a77c8bb4d13d  terminal-red.cast
 9d8537afa1362a8afa09540b7c735adcf271dd0fbb9f2e76df6cd3e4074df131  terminal-red.gif
 9212107378b3a91d5de33aa3520e798155016b25a2eb7322cdfe4e62909151ab  terminal-red.mp4
 5b5933005e67a133b7aa9ec3b6cb52b4773a437a999a1550134402cddab4f70b  terminal-green.cast
